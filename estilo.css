@@ -1,0 +1,16 @@
+#div0{
+    border: rgb(0, 0, 0) solid; background-color: rgb(5, 107, 107); width:800px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(aprender-css.jpg);  
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+#div1{
+    border: rgb(0, 0, 0) solid; background-color: aqua; width:400px;
+}
+
+#div2{
+    border: rgb(0, 0, 0) solid; width: 400px; height: 100px; text-align: center;margin: auto; background-color: rgb(96, 117, 233);
+}
+#div3{
+    border: rgb(0, 0, 0) solid; width:400px ; height:150px ; text-align: center; margin: auto; background-color: rgb(192, 96, 133);
+}

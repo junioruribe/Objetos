@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./estilos/estilo.css">
+    <style>
+        div{ border-style: solid red; margin: auto; text-align: center;}
+    </style>
+     <script type="text/javascript">
+        let lista=[]
+        function crear(){
+            let nom,cod,edad,user,clave,id,nom2,descr;
+             nom=document.getElementById('txtNombre').value
+             cod=document.getElementById('txtCodigo').value
+             edad=document.getElementById('txtEdad').value
+             user=document.getElementById('txtUser').value
+             clave=document.getElementById('txtClave').value
+             id=document.getElementById('txtId').value
+             nom2=document.getElementById('txtNombre2').value
+             descr=document.getElementById('txtDescripcion').value
+            let obj={
+                nombre:nom,
+                codigo:cod,
+                edad:edad,
+                login:[user,clave],
+                rol:{id,nom2,descr}
+            }
+            lista.push(obj)
+         }
+
+        
+         function mostrar(){
+            var datos=""
+            datos=""
+            lista.forEach(function(arg){
+                datos+='Nombre: '+arg.nombre+'\n'
+                datos+='Codigo: '+arg.codigo+'\n'
+                datos+='Edad: '+arg.edad+'\n'
+                datos+='User: '+arg.login[0]+'\n'
+                datos+='Clave: '+arg.login[1]+'\n'
+                datos+='Id: '+arg.rol.id+'\n'
+                datos+='Nombre: '+arg.rol.nom2+'\n'
+                datos+='Descripcion: '+arg.rol.descr+'\n\n'
+             
+            })
+            alert(datos)
+        }
+
+        function limpiar(){
+            document.getElementById('txtNombre').value="";
+            document.getElementById('txtCodigo').value="";
+            document.getElementById('txtEdad').value="";
+            document.getElementById('txtUser').value="";
+            document.getElementById('txtClave').value="";
+            document.getElementById('txtId').value="";
+            document.getElementById('txtNombre2').value="";
+            document.getElementById('txtDescripcion').value="";
+            
+        }
+
+      /*  function mayor(){
+            if (arg.edad>18) {
+            var datos=""
+            datos=""
+            lista.forEach(function(arg){
+                datos+='Nombre: '+arg.nombre+'\n'
+                datos+='Codigo: '+arg.codigo+'\n'
+                datos+='Edad: '+arg.edad+'\n'
+                datos+='User: '+arg.login[0]+'\n'
+                datos+='Clave: '+arg.login[1]+'\n'
+                datos+='Id: '+arg.rol.id+'\n'
+                datos+='Nombre: '+arg.rol.nom2+'\n'
+                datos+='Descripcion: '+arg.rol.descr+'\n\n'
+            }
+            }
+        
+ }*/
+     </script>
+</head>
+<body> 
+        <p align="center">PERSONA</p>
+<div id="div0">
+    <div id="div1" align="center">
+        <br>
+        Nombre:
+        <input type="text" id="txtNombre">
+        <br><br>
+        Codigo:
+        <input type="text" id="txtCodigo">
+        <br><br>
+        Edad:
+        <input type="text" id="txtEdad">
+        <br><br>
+    </div>
+    <hr>
+        <p align="center">LOGIN</p>
+    <div id="div2" align="center">
+        <br>
+        User:
+        <input type="text" id="txtUser">
+        <br><br>
+        Clave:
+        <input type="text" id="txtClave">
+        <br><br>
+    </div>
+    <hr>
+    <p align="center">ROL</p>
+    <div id="div3" align="center">
+        <br>
+        Id:
+        <input type="text" id="txtId">
+        <br><br>
+        Nombre:
+        <input type="text" id="txtNombre2">
+        <br><br>
+        Descripcion:
+        <input type="text" id="txtDescripcion">
+        <br><br>
+    </div>
+    <br>
+        <input type="button" value="crear" onclick="crear()">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" value="mostrar" onclick="mostrar()">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" value="limpiar" onclick="limpiar()">
+        &nbsp;&nbsp;&nbsp;
+        <input type="button" value="mayores" onclick="mayores()">
+        &nbsp;&nbsp;&nbsp;
+</div>
+
+</body>
+</html>
